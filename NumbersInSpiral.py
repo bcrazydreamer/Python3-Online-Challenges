@@ -1,7 +1,5 @@
 n =int(input())
-arr=[]
-for i in range(n):
-    arr.append([int(0) for i in range(n)])
+arr=[[int(0) for i in range(n)] for j in range(n)]
 r=c=0;r1=c1=n
 val=1
 for i in range(int(n/2)):
@@ -34,13 +32,5 @@ if(n%2!=0):
   
 for i in arr:
   for j in i:
-    spiral=''
-    if(j<10):
-      space='    '
-    elif(j>99):
-      space='  '
-    else:
-      space='   '
-    print(j,end=space)
+    print(j,end='\t')
   print()
-
